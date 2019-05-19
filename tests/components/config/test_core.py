@@ -13,7 +13,7 @@ def test_validate_config_ok(hass, hass_client):
     with patch.object(config, 'SECTIONS', ['core']):
         yield from async_setup_component(hass, 'config', {})
 
-    yield from asyncio.sleep(0.1, loop=hass.loop)
+    yield from asyncio.sleep(0.1)
 
     client = yield from hass_client()
 
